@@ -1,0 +1,46 @@
+{
+  "name": "nav-bar-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -w",
+    "start": "nodemon ./server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/team-barium/Nav-Bar-Module.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/team-barium/Nav-Bar-Module/issues"
+  },
+  "homepage": "https://github.com/team-barium/Nav-Bar-Module#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "css": "^2.2.4",
+    "css-loader": "^2.1.0",
+    "express": "^4.16.4",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.4",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "sequelize": "^4.42.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.29.2",
+    "webpack-cli": "^3.2.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5"
+  }
+}
