@@ -2,6 +2,7 @@ import React from "react";
 import Top from "./Top.jsx";
 import styles from "../css modules/Main.css";
 import Middle from "./Middle.jsx";
+import Bottom from "./Bottom.jsx";
 
 class Main extends React.Component {
   constructor(props) {
@@ -12,8 +13,14 @@ class Main extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <Top />
-        <Middle />
+        <div>
+          <Top />
+          <div />
+          <Middle />
+        </div>
+        <div>
+          <Bottom />
+        </div>
       </div>
     );
   }

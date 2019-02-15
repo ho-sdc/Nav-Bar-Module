@@ -16,43 +16,71 @@
 }
 
 .parent {
-  display: flex;
   height: 48px;
+  padding-top: 0px;
+  display: flex;
+  align-items: center;
   background-color: black;
+  color: black;
 }
 
 .container {
-  display: grid;
-  color: white;
-  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
   max-width: 1220px;
-  grid-template-columns: 100px 1fr 150px 50px;
+  margin: 0 auto 0 auto;
+  padding: 0 16px 0 16px;
+  width: 100%;
 }
 
 body {
   margin: 0px;
 }
 
+.parentLogo {
+  height: 100%;
+}
+
 .logo {
-  width: 100px;
-  top: -32px;
+  width: 70px;
+  top: -15px;
   position: relative;
-  height: 80px;
+  height: 100%;
   margin-right: 20px;
   background-image: url("../assets/abibas.jpg");
-  background-size: cover;
-  overflow-y: visible;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: contain;
+  transform-origin: 0 25px;
 }
 
 .labels {
-  padding-top: 18px;
+  /* padding-top: 18px;
   padding-right: 0px;
   padding-bottom: 0px;
-  padding-left: 5px;
+  padding-left: 5px; */
+  flex-grow: 2;
   font-size: 15px;
-  margin: 0 3px 0 3px;
+  display: flex;
+  flex-direction: row;
+  /* margin: 0 3px 0 3px; */
   font-weight: 100;
   font-family: "abibaspro-regular";
+}
+
+.perlabel {
+  position: relative;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: "abibaspro-regular";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 45px;
+  margin: 0 3px;
+  color: #fff;
 }
 
 .labels a:link {
@@ -68,6 +96,7 @@ body {
   height: 17px;
   width: 1px;
   margin-left: 5px;
+  margin-right: 5px;
   position: relative;
   top: 17px;
   background-color: #767677;
@@ -75,5 +104,61 @@ body {
 
 .search {
   display: flex;
-  flex-direction: row;
+  position: relative;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.searchlogo {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  justify-content: flex-end;
+  left: 0;
+  top: 0px;
+  align-self: end;
+  background-color: white;
+  background-image: url("../assets/newSearchLogo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.searchicon {
+  display: inline-block;
+  vertical-align: text-top;
+  width: 24px;
+  height: 24px;
+}
+
+.form {
+  width: 100%;
+}
+
+.input {
+  font-size: 13px;
+  font-family: "abibasdin-regular";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  background-color: #fff;
+  border: 0;
+  height: 32px;
+  outline: none;
+  padding: 0;
+  width: 100%;
+  border-radius: 0;
+  color: #000;
+}
+
+.shoppingbag {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  align-self: flex-end;
+  background-image: url("../assets/shoppingbag.png");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: contain;
+  background-position: center;
 }

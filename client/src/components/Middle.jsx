@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../css modules/Middle.css";
-import searchlogo from "../assets/searchlogo.png";
 
 export default class Middle extends React.Component {
   constructor(props) {
@@ -12,33 +11,42 @@ export default class Middle extends React.Component {
     return (
       <div className={styles.parent}>
         <div className={styles.container}>
-          <div className={styles.logo}>
-            <a href="#" />
+          <div className={styles.parentLogo}>
+            <div className={styles.logo} />
           </div>
-          <span className={styles.labels}>
-            <div>
-              <a href="#">MEN</a>
+          <div className={styles.labels}>
+            <div className={styles.perlabel}>
+              <a href="#">Men</a>
             </div>
-            <div>
-              <a href="#">WOMEN</a>
+            <div className={styles.perlabel}>
+              <a href="#">Women</a>
             </div>
-            <div>
-              <a href="#">KIDS</a>
+            <div className={styles.perlabel}>
+              <a href="#">Kids</a>
             </div>
             <div className={styles.spacer} />
-            <div>
-              <a href="#">SPORTS</a>
+            <div className={styles.perlabel}>
+              <a href="#">Sports</a>
             </div>
-            <div>
-              <a href="#">BRANDS</a>
+            <div className={styles.perlabel}>
+              <a href="#">Brands</a>
             </div>
-          </span>
+          </div>
           <div className={styles.search}>
-            <div>
-              <img src={searchlogo} />
+            <div className={styles.searchlogo} />
+            <div className={styles.searchwrapper}>
+              <form className={styles.form}>
+                <input
+                  type="text"
+                  name="q"
+                  placeholder="search"
+                  className={styles.input}
+                />
+              </form>
             </div>
-            <input type="text" value="Search" />
-            <div />
+            <div>
+              <div className={styles.shoppingbag} />
+            </div>
           </div>
         </div>
       </div>

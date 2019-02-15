@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "abibaspro-bold";
+  src: url("../assets/adineuePRO-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "abibaspro-regular";
+  src: url("../assets/adineuePRO-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "abibasdin-bold";
+  src: url("../assets/AdihausDIN-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "abibasdin-regular";
+  src: url("../assets/AdihausDIN-Regular.woff2") format("woff2");
+}
+
+.container {
+  display: flex;
+  padding-left: 0;
+  height: 40px;
+  width: 100%;
+  justify-content: center;
+}
+
+.headers {
+  padding: 0 10px 0 10px;
+  will-change: opacity;
+  font-size: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: center;
+}
+
+.itemReturn {
+  font-size: 14px;
+  line-height: 1.4;
+  cursor: pointer;
+  width: auto;
+  white-space: normal;
+  text-align: left;
+  text-decoration: none initial initial;
+  font-weight: 400;
+  font-family: "abibaspro-regular";
+  text-transform: uppercase;
+  color: #363738;
+  padding-left: 35px;
+}
+
+.deliveryImg {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  background-image: url("../assets/deliveryImg.png");
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: contain;
+  background-position: center;
+}
+
+.rewardImg {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  background-image: url("../assets/rewardImg.png");
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: contain;
+  background-position: center;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
