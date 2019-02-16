@@ -87,3 +87,15 @@
   height: auto;
   vertical-align: middle;
 }
+
+.example-enter {
+  height: 0px;
+}
+
+.example-enter.example-enter-active {
+  height: 100px;
+}
+
+.example-leave.example-leave-active {
+  height: 0px;
+}

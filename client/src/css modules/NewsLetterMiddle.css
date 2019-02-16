@@ -1,0 +1,267 @@
+@font-face {
+  font-family: "abibaspro-bold";
+  src: url("../assets/adineuePRO-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "abibaspro-regular";
+  src: url("../assets/adineuePRO-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "abibasdin-bold";
+  src: url("../assets/AdihausDIN-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "abibasdin-regular";
+  src: url("../assets/AdihausDIN-Regular.woff2") format("woff2");
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 0 20px 0;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 0em;
+  margin-block-end: 1em;
+}
+
+.emailInputSection {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 280px;
+}
+
+.actualform {
+  position: relative;
+  font-family: "abibasdis-regular";
+}
+
+.emaillabel {
+  font-size: 11px;
+  top: -9px;
+  left: 17px;
+  margin-top: 0;
+  padding: 2px 5px 1px;
+  background-color: #fff;
+  letter-spacing: 1px;
+  color: #000;
+  position: absolute;
+  text-transform: uppercase;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.formitem {
+  font-family: "abibasdin-regular";
+  font-weight: 400;
+  font-style: normal;
+  min-height: 50px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+  border: 1.01565px solid #767677;
+  border-top-color: rgb(118, 118, 119);
+  border-top-style: solid;
+  border-top-width: 1.01565px;
+  border-right-color: rgb(118, 118, 119);
+  border-right-style: solid;
+  border-right-width: 1.01565px;
+  border-bottom-color: rgb(118, 118, 119);
+  border-bottom-style: solid;
+  border-bottom-width: 1.01565px;
+  border-left-color: rgb(118, 118, 119);
+  border-left-style: solid;
+  border-left-width: 1.01565px;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  padding: 0 18px 0 18px;
+  width: 100%;
+  margin: 0;
+}
+
+.formitemhint {
+  display: inline-block;
+  color: #e63f3f;
+  margin-left: 3px;
+}
+
+.formhint {
+  color: #767677;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 21px;
+}
+
+.aligncheckbox {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 26px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.agecheck {
+  position: relative;
+}
+
+.label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  line-height: 24px;
+  margin-bottom: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  outline-color: initial;
+  outline-style: none;
+  outline-width: initial;
+}
+
+.inputcheckbox {
+  display: block;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin: 0 14px 0 0;
+  color: #767677;
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: all;
+  touch-action: manipulation;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  outline-color: initial;
+  outline-style: none;
+  outline-width: initial;
+}
+
+.thirteen {
+  display: inline-flex;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+.questionicon {
+  height: 26px;
+  position: relative;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 2px 2px 2px 2px;
+  background-color: #ebedeb;
+  cursor: pointer;
+  margin-bottom: 0;
+  letter-spacing: 0;
+}
+
+.gender {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.genderword {
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 17px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "abibasdin-regular";
+  font-weight: 400;
+}
+
+.malefemale {
+  flex-direction: row;
+  display: flex;
+}
+
+.option {
+  margin-right: 25px;
+  flex-shrink: 0;
+  margin-bottom: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.inputmale {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  padding: 0;
+}
+
+.gendername {
+  height: 24px;
+  display: inline-flex;
+  line-height: 24px;
+  font-family: "abibasdin-regular";
+}
+
+.container .signupbutton {
+  width: auto;
+  padding: 0 20px 0 20px;
+  height: 50px;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-content: center;
+  min-height: 50px;
+  line-height: 50px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-family: "abibasdin-regular";
+  font-weight: 700;
+}
+.signupbutton:active {
+  transform: translateY(3px);
+}
+
+.signupIcon {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 30px;
+  align-self: center;
+  height: 24px;
+  flex-shrink: 0;
+  margin-left: 20px;
+  background-image: url("../assets/signupicon.png");
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.signupbutton::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 1px #000;
+  transform: translate(3px, 3px);
+}

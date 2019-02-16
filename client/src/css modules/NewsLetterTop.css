@@ -54,3 +54,21 @@
   display: inline-block;
   vertical-align: top;
 }
+
+.learnmoreContainer {
+}
+
+.learnmore {
+}
+
+.emaillogo {
+  display: inline-block;
+  vertical-align: top;
+}
+
+img {
+  width: 35px;
+  height: 40px;
+  margin-right: 8px;
+  border-radius: 18px;
+}

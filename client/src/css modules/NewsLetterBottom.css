@@ -1,0 +1,26 @@
+.footercontainer {
+  padding-bottom: 20px;
+  clear: both;
+  margin: 0 auto 0 auto;
+  background-color: #fff;
+  color: #767677;
+  max-width: 1280px;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.a:link {
+  color: black;
+  text-decoration: none;
+}
+.a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.a:hover {
+  text-decoration: underline;
+  color: white;
+  background-color: rgb(36, 35, 35);
+}

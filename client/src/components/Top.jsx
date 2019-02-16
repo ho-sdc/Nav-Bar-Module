@@ -1,11 +1,15 @@
 import styles from "../css modules/Top.css";
 import React from "react";
 import loginMan from "../assets/login-man.png";
+import NewsLetter from "./NewsLetter.jsx";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 export default class Top extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      clicked: false
+    };
   }
 
   render() {
@@ -20,10 +24,12 @@ export default class Top extends React.Component {
         </div>
         <div className={styles.spacer} />
         <div className={styles.newsletter}>
-          <a href="#">NEWSLETTER SIGNUP</a>
+          <a href="#" onClick={this.props.clicked}>
+            NEWSLETTER SIGNUP
+          </a>
         </div>
+        <div />
         <div className={styles.help}>
-          {" "}
           <a href="#">LOG IN</a>{" "}
           <a href="#">
             <img src={loginMan} className={styles.img1} />
