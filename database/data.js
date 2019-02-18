@@ -1,5 +1,5 @@
 const categories = {
-  menAndWomen: [
+  men: [
     {
       featured: [
         "New Arrivals",
@@ -11,7 +11,9 @@ const categories = {
         "NMD",
         "Statement Sneakers",
         "Workout Essentials"
-      ],
+      ]
+    },
+    {
       shoes: [
         "Originals",
         "Running",
@@ -27,7 +29,9 @@ const categories = {
         "Tennis",
         "Baseball",
         "Sale Shoes"
-      ],
+      ]
+    },
+    {
       clothing: [
         "Pants",
         "Hoodies & Sweatshirts",
@@ -41,7 +45,9 @@ const categories = {
         "Shorts",
         "Tank Tops",
         "Sale Apparel"
-      ],
+      ]
+    },
+    {
       accessories: [
         "Bags & Backpacks",
         "Hats & Beanies",
@@ -53,7 +59,9 @@ const categories = {
         "Gloves",
         "All Accessories",
         "Sale Accessories"
-      ],
+      ]
+    },
+    {
       sports: [
         "Running",
         "Soccer",
@@ -73,6 +81,81 @@ const categories = {
       ]
     }
   ],
+  women: [
+    {
+      featured: [
+        "New Arrivals",
+        "Best Sellars",
+        "Release Dates",
+        "YEEZY",
+        "Ultraboost",
+        "NMB",
+        "Statement Sneakers",
+        "Work Out Essentials"
+      ]
+    },
+    {
+      shoes: [
+        "Originals",
+        "Running",
+        "Workout",
+        "Essentials",
+        "Sandals & Slides",
+        "Hiking",
+        "Tennis",
+        "Golf",
+        "Soccer",
+        "Volleyball",
+        "Sale Shoes"
+      ]
+    },
+    {
+      clothing: [
+        "Hoodies & Sweatshirts",
+        "Pants",
+        "Leggings & Tights",
+        "Sports Bras",
+        "Track Suits",
+        "Jackets & Vests",
+        "Short Sleeve Shirts",
+        "Long Sleeve Shirts",
+        "Dresses & Skirts",
+        "Shorts",
+        "Tank Tops",
+        "Sale Apparel"
+      ]
+    },
+    {
+      accessories: [
+        "Bags & Backpacks",
+        "Hats & Beanies",
+        "Socks",
+        "Phone Cases",
+        "Sunglasses",
+        "Balls",
+        "Watches",
+        "All Accessories",
+        "Sale Accessories"
+      ]
+    },
+    {
+      sports: [
+        "Running",
+        "Training",
+        "Basketball",
+        "Outdoor",
+        "Tennis",
+        "Golf",
+        "Soccer",
+        "Volleyball",
+        "Skateboarding",
+        "Yoga",
+        "Lacrosse",
+        "Hockey",
+        "College Gear"
+      ]
+    }
+  ],
   kids: [
     {
       featured: [
@@ -83,7 +166,9 @@ const categories = {
         "adicolor",
         "Marquee Boost",
         "Statement Sneakers"
-      ],
+      ]
+    },
+    {
       "Youth (8-14)": [
         "Boys Shoes",
         "Girls Shoes",
@@ -94,7 +179,9 @@ const categories = {
         "Hoodies & Sweatshirts",
         "Pants & Shorts",
         "Sale"
-      ],
+      ]
+    },
+    {
       "Children (4-8)": [
         "Boys Shoes",
         "Girls Shoes",
@@ -103,10 +190,10 @@ const categories = {
         "Boys Clothing",
         "Girls Clothing",
         "Sale"
-      ],
-      "Baby & Toddler (0-4)": ["Shoes", "Clothing", "Sale"],
-      Accessories: ["Socks", "Hats & Beanies", "Balls"]
-    }
+      ]
+    },
+    { "Baby & Toddler (0-4)": ["Shoes", "Clothing", "Sale"] },
+    { Accessories: ["Socks", "Hats & Beanies", "Balls"] }
   ],
   sports: [
     {
@@ -117,7 +204,9 @@ const categories = {
         "Ultraboost",
         "Alphabounce",
         "Pureboost"
-      ],
+      ]
+    },
+    {
       soccer: [
         "Shoes",
         "Clothing",
@@ -126,14 +215,12 @@ const categories = {
         "X",
         "Nemeziz",
         "Copa"
-      ],
-      outdoor: [
-        "Shoes",
-        "Clothing",
-        "TERREX",
-        "Hiking Boots",
-        "Winter Jackets"
-      ],
+      ]
+    },
+    {
+      outdoor: ["Shoes", "Clothing", "TERREX", "Hiking Boots", "Winter Jackets"]
+    },
+    {
       basketball: [
         "Shoes",
         "Clothing",
@@ -162,7 +249,9 @@ const categories = {
         "New Arrivals",
         "Z.N.E.",
         "ID"
-      ],
+      ]
+    },
+    {
       StellaMcartney: [
         "Shoes",
         "Clothing",
@@ -170,7 +259,9 @@ const categories = {
         "New Arrivals",
         "Tennis",
         "Training"
-      ],
+      ]
+    },
+    {
       addidasSkateboarding: [
         "Shoes",
         "Clothing",
@@ -179,7 +270,9 @@ const categories = {
         "3MC",
         "Matchcourt",
         "Busenitz"
-      ],
+      ]
+    },
+    {
       collections: [
         "Superstar",
         "Stan Smith",
