@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "../css modules/Bottom.css";
+import Popup from "reactjs-popup";
+import PopUpInfo from "./PopUpInfo.jsx";
 
 class Bottom extends React.Component {
   constructor(props) {
@@ -13,7 +15,12 @@ class Bottom extends React.Component {
         <div className={styles.headers}>
           <div className={styles.deliveryImg} />
           <div className={styles.itemReturn}>
-            <a href="#">Free Shipping and free returns</a>
+            <Popup
+              trigger={<a href="#">Free Shipping and free returns</a>}
+              modal
+            >
+              {close => <PopUpInfo close={close} />}
+            </Popup>
           </div>
         </div>
         <div className={styles.headers}>
