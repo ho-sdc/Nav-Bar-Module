@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "abibaspro-bold";
+  src: url("../assets/adineuePRO-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "abibaspro-regular";
+  src: url("../assets/adineuePRO-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "abibasdin-bold";
+  src: url("../assets/AdihausDIN-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "abibasdin-regular";
+  src: url("../assets/AdihausDIN-Regular.woff2") format("woff2");
+}
+
+.container {
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  background: transparent;
+  left: 0;
+  right: 0;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.mainLine {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-left: 110px;
+  margin-top: 21px;
+}
+
+.headline {
+  display: block;
+  text-transform: uppercase;
+  font-family: "abibaspro-bold";
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0;
+  padding-left: 40px;
+  /* list-style: none; */
+}
+
+.listtrial {
+  list-style: none;
+  font-size: 13px;
+  padding-top: 7px;
+}
+
+.horizontalseparater {
+  width: 16px;
+  height: 1px;
+  overflow: hidden;
+  margin-top: 30px;
+  margin-bottom: 7px;
+  background-color: #ccc;
+}
+
+.sale {
+  font-weight: bold;
+}
+.a {
+  cursor: pointer;
+}
+.a:link {
+  color: black;
+  text-decoration: none;
+}
+.a:visited {
+  color: black;
+  text-decoration: none;
+}
