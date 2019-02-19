@@ -13,7 +13,6 @@ const SetItems = props =>
 
 const GetFeatured = props => {
   var featuredCat = categories.men[0];
-  console.log(featuredCat.featured);
   var firstThree = featuredCat.featured.slice(0, 3);
   var lastThree = featuredCat.featured.slice(3);
   return (

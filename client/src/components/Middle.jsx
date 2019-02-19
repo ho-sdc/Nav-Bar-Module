@@ -1,15 +1,19 @@
 import React from "react";
 import styles from "../css modules/Middle.css";
+import axios from "axios";
+import DisplayPopUp from "./DisplayPopUp.jsx";
 
 export default class Middle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       type: "",
-      searchInput: ""
+      searchInput: undefined,
+      responseArr: undefined
     };
     this.renderThree = this.renderThree.bind(this);
     this.handleSearchInput = this.handleSearchInput.bind(this);
+    this.handleGet = this.handleGet.bind(this);
   }
 
   renderThree(arr) {
@@ -26,13 +30,35 @@ export default class Middle extends React.Component {
     });
   }
 
+  handleGet(searchInput) {
+    axios
+      .get(`/search/${searchInput}`)
+      .then(res => {
+        if (res.data.length > 0) {
+          this.setState(
+            {
+              responseArr: res.data
+            },
+            () => console.log(this.state.responseArr)
+          );
+        }
+      })
+      .catch(() => {
+        this.setState({ responseArr: undefined });
+      });
+  }
+
   handleSearchInput(e) {
     let { value } = e.target;
     this.setState(
       {
         searchInput: value
       },
-      () => console.log(this.state.searchInput)
+      () => {
+        if (this.state.searchInput) {
+          this.handleGet(this.state.searchInput);
+        }
+      }
     );
   }
 
@@ -61,6 +87,10 @@ export default class Middle extends React.Component {
                 onChange={this.handleSearchInput.bind(this)}
               />
             </div>
+            {this.state.responseArr ? (
+              <DisplayPopUp responseArr={this.state.responseArr} />
+            ) : null}
+
             <div className={styles.shoppingbag} />
           </div>
         </div>

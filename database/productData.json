@@ -1,0 +1,82 @@
+[
+  {
+    "keyword": "coco",
+    "item_name": "Coco sleeping",
+    "category": "Sleeping pictures",
+    "cuteness_level": 1000,
+    "stars": 5,
+    "picture": "Insert Picture here"
+  },
+  {
+    "keyword": "coco",
+    "item_name": "Coco angry",
+    "category": "Angry dog",
+    "cuteness_level": 2345,
+    "stars": 5,
+    "picture": "Insert Picture here"
+  },
+  {
+    "keyword": "coco",
+    "item_name": "Coco eating",
+    "category": "Binge eating",
+    "cuteness_level": 5,
+    "stars": 2345,
+    "picture": "Insert Picture here"
+  },
+  {
+    "keyword": "coco",
+    "item_name": "Coco cuddling",
+    "category": "Sweet cuddles",
+    "cuteness_level": 5,
+    "stars": 2345,
+    "picture": "Insert Picture here"
+  },
+  {
+    "keyword": "coco",
+    "item_name": "Coco scared",
+    "category": "Scaredy cat",
+    "cuteness_level": 2345,
+    "stars": 5,
+    "picture": "Insert Picture here"
+  },
+  {
+    "keyword": "tim",
+    "item_name": "tim scared",
+    "category": "Scaredy cat",
+    "cuteness_level": 2345,
+    "stars": 5,
+    "picture": "Insert Picture here"
+  },
+  {
+    "keyword": "tim",
+    "item_name": "tim scared",
+    "category": "Scaredy cat",
+    "cuteness_level": 2345,
+    "stars": 5,
+    "picture": "Insert Picture here"
+  },
+  {
+    "keyword": "tim",
+    "item_name": "tim scared",
+    "category": "Scaredy cat",
+    "cuteness_level": 2345,
+    "stars": 5,
+    "picture": "Insert Picture here"
+  },
+  {
+    "keyword": "tim",
+    "item_name": "tim scared",
+    "category": "Scaredy cat",
+    "cuteness_level": 2345,
+    "stars": 5,
+    "picture": "Insert Picture here"
+  },
+  {
+    "keyword": "tim",
+    "item_name": "tim scared",
+    "category": "Scaredy cat",
+    "cuteness_level": 2345,
+    "stars": 5,
+    "picture": "Insert Picture here"
+  }
+]

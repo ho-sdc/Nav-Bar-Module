@@ -42,7 +42,7 @@ const KidsTab = props => {
             {titles[key].map(items => {
               return (
                 <li key={items} className={styles.listtrial}>
-                  {items}
+                  <a className={styles.a}>{items}</a>
                 </li>
               );
             })}
