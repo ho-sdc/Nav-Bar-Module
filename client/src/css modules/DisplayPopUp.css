@@ -1,4 +1,93 @@
+@font-face {
+  font-family: "abibaspro-bold";
+  src: url("../assets/adineuePRO-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "abibaspro-regular";
+  src: url("../assets/adineuePRO-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "abibasdin-bold";
+  src: url("../assets/AdihausDIN-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "abibasdin-regular";
+  src: url("../assets/AdihausDIN-Regular.woff2") format("woff2");
+}
+
 .neon {
   color: black;
+  display: inline-block;
+  margin-top: 50px;
+  position: absolute;
+  top: 25px;
+  left: 755px;
+  width: 600px;
+  height: 400px;
+  font-family: "abibasdin-regular";
+  padding: 20px 30px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  /* transform: translateX(px); */
   background-color: white;
+}
+
+.overAll {
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 0.5px;
+}
+
+.images {
+  border-radius: 8px;
+  height: 75px;
+  width: 50px;
+}
+
+.suggestionHeaders {
+  display: block;
+  font-family: "abibaspro-bold";
+  font-weight: 800;
+  font-size: 14px;
+  padding-right: 100px;
+}
+
+.suggestionBox {
+  text-transform: uppercase;
+  padding-right: 100px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+}
+
+.productHeaders {
+  display: block;
+  font-family: "abibaspro-bold";
+  font-weight: 800;
+}
+
+.productBox {
+  text-transform: uppercase;
+}
+
+.listStyle {
+  list-style: none;
+  line-height: 22px;
+  font-size: 16px;
+  padding-left: 0px;
+}
+
+.eachList {
+  margin: 0 0 8px;
+}
+
+.productInfo {
+}
+
+.parentProducts {
+  display: flex;
+  flex-direction: row;
+}
+
+.seeAll {
+  padding-top: 200px;
 }
