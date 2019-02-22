@@ -5,7 +5,7 @@
     "category": "Sleeping pictures",
     "cuteness_level": 1000,
     "stars": 5,
-    "picture": "Insert Picture here"
+    "picture": "https://s3-us-west-1.amazonaws.com/abibasnavbar/Coco+sleep.jpg"
   },
   {
     "keyword": "coco",
@@ -13,7 +13,7 @@
     "category": "Angry dog",
     "cuteness_level": 2345,
     "stars": 5,
-    "picture": "Insert Picture here"
+    "picture": "https://s3-us-west-1.amazonaws.com/abibasnavbar/Coco+dress.png"
   },
   {
     "keyword": "coco",
@@ -21,7 +21,7 @@
     "category": "Binge eating",
     "cuteness_level": 5,
     "stars": 2345,
-    "picture": "Insert Picture here"
+    "picture": "https://s3-us-west-1.amazonaws.com/abibasnavbar/Coco+eating.png"
   },
   {
     "keyword": "coco",
@@ -29,7 +29,7 @@
     "category": "Sweet cuddles",
     "cuteness_level": 5,
     "stars": 2345,
-    "picture": "Insert Picture here"
+    "picture": "https://s3-us-west-1.amazonaws.com/abibasnavbar/Coco+cute.jpg"
   },
   {
     "keyword": "coco",
@@ -37,7 +37,7 @@
     "category": "Scaredy cat",
     "cuteness_level": 2345,
     "stars": 5,
-    "picture": "Insert Picture here"
+    "picture": "https://s3-us-west-1.amazonaws.com/abibasnavbar/Coco+scared.jpg"
   },
   {
     "keyword": "tim",
