@@ -1,19 +1,12 @@
 import React from "react";
 import styles from "../css modules/Middle.css";
-import axios from "axios";
-import DisplayPopUp from "./DisplayPopUp.jsx";
+import Search from "./Search.jsx";
 
 export default class Middle extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      type: "",
-      searchInput: undefined,
-      responseArr: undefined
-    };
+    this.state = {};
     this.renderThree = this.renderThree.bind(this);
-    this.handleSearchInput = this.handleSearchInput.bind(this);
-    this.handleGet = this.handleGet.bind(this);
   }
 
   renderThree(arr) {
@@ -30,38 +23,6 @@ export default class Middle extends React.Component {
     });
   }
 
-  handleGet(searchInput) {
-    axios
-      .get(`/search/${searchInput}`)
-      .then(res => {
-        if (res.data.length > 0) {
-          this.setState(
-            {
-              responseArr: res.data
-            },
-            () => console.log(this.state.responseArr)
-          );
-        }
-      })
-      .catch(() => {
-        this.setState({ responseArr: undefined });
-      });
-  }
-
-  handleSearchInput(e) {
-    let { value } = e.target;
-    this.setState(
-      {
-        searchInput: value
-      },
-      () => {
-        if (this.state.searchInput) {
-          this.handleGet(this.state.searchInput);
-        }
-      }
-    );
-  }
-
   render() {
     const renderThree = this.renderThree(["Men", "Women", "Kids"]);
     const renderTwo = this.renderThree(["Sports", "Brands"]);
@@ -69,30 +30,22 @@ export default class Middle extends React.Component {
       <div className={styles.parent}>
         <div className={styles.container}>
           <div className={styles.parentLogo}>
-            <div className={styles.logo} />
+            <img
+              src="https://s3-us-west-1.amazonaws.com/abibas-shoes/abibas.jpg"
+              className={styles.logo}
+            />
           </div>
           <div className={styles.labels}>
             {renderThree}
             <div className={styles.spacer} />
             {renderTwo}
           </div>
-          <div className={styles.search}>
-            <div className={styles.formOpen}>
-              <div className={styles.searchlogo} />
-              <input
-                type="text"
-                name="q"
-                placeholder="search"
-                className={styles.input}
-                onChange={this.handleSearchInput.bind(this)}
-              />
-            </div>
-            {this.state.responseArr ? (
-              <DisplayPopUp responseArr={this.state.responseArr} />
-            ) : null}
+          <Search handleGet={this.props.handleGet} />
 
-            <div className={styles.shoppingbag} />
-          </div>
+          <img
+            src="https://s3-us-west-1.amazonaws.com/abibasnavbar/shoppingbag.png"
+            className={styles.shoppingbag}
+          />
         </div>
       </div>
     );

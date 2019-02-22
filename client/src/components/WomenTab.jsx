@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../css modules/MenTab.css";
-import { categories } from "/Users/badwolf/HR_files/Nav-Bar-Module/database/data.js";
+import { categories } from "../../../database/data.js";
 
 const SetItems = props =>
   props.arr.map((items, index) => {

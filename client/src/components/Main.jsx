@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Top from "./Top.jsx";
 import styles from "../css modules/Main.css";
 import Middle from "./Middle.jsx";
@@ -9,16 +9,27 @@ import WomenTab from "./WomenTab.jsx";
 import KidsTab from "./KidsTab.jsx";
 import SportsTab from "./SportsTab.jsx";
 import BrandsTab from "./BrandsTab.jsx";
+import axios from "axios";
+import DisplayPopUp from "./DisplayPopUp.jsx";
 
 class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       clicked: false,
-      type: ""
+      type: "",
+      responseArr: undefined
     };
     this.handleClick = this.handleClick.bind(this);
     this.toggleHover = this.toggleHover.bind(this);
+    this.handleGet = this.handleGet.bind(this);
+    this.handleSearchClicked = this.handleSearchClicked.bind(this);
+  }
+
+  handleSearchClicked() {
+    this.setState({
+      responseArr: undefined
+    });
   }
 
   handleClick(e) {
@@ -33,14 +44,38 @@ class Main extends React.Component {
       type: type || undefined
     });
   }
+  handleGet(searchInput) {
+    axios
+      .get(`http://localhost:3001/search/${searchInput}`)
+      .then(res => {
+        if (res.data.length > 0) {
+          console.log(res.data);
+          this.setState({
+            responseArr: res.data
+          });
+        }
+      })
+      .catch(() => {
+        this.setState({ responseArr: undefined });
+      });
+  }
 
   render() {
     return (
-      <div className={styles.container}>
+      <div
+        id="mainDiv"
+        className={styles.container}
+        ref={node => (this.node = node)}
+      >
         <div>
           <Top clicked={this.handleClick} />
           <div>{this.state.clicked ? <NewsLetter /> : null}</div>
-          <Middle toggleHover={this.toggleHover} />
+          <Middle
+            toggleHover={this.toggleHover}
+            handleGet={this.handleGet}
+            responseArr={this.state.responseArr}
+            handleSearchClicked={this.handleSearchClicked}
+          />
         </div>
         <div>{!this.state.type && <Bottom />}</div>
         <div>
@@ -68,9 +103,28 @@ class Main extends React.Component {
             <BrandsTab toggleHover={this.toggleHover} />
           )}
         </div>
+        <div
+          className={styles.DisplayPopUp}
+          style={this.state.responseArr ? { display: "block" } : {}}
+        >
+          {" "}
+          {this.state.responseArr ? (
+            <DisplayPopUp
+              handleSearchClicked={this.handleSearchClicked}
+              responseArr={this.state.responseArr}
+            />
+          ) : null}
+        </div>
       </div>
     );
   }
 }
 
 export default Main;
+
+// this.state.searchClicked &&
+// handleSearchClick() {
+//   this.setState({
+//     searchClicked: true
+//   });
+// }
