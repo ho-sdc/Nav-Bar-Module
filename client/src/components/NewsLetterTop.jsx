@@ -27,7 +27,12 @@ const NewsLetterTop = () => (
         <div className={styles.calloutbar}>
           <div className={styles.calloutbarIn}>
             <div className={styles.emaillogo}>
-              <img src={save} width="88" height="98" />
+              <img
+                src={save}
+                width="88"
+                height="98"
+                className={styles.images}
+              />
             </div>
             <div className={styles.calloutbarCopy}>
               <div className={styles.learnmoreContainer}>
