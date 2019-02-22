@@ -26,7 +26,7 @@ class Bottom extends React.Component {
         <div className={styles.headers}>
           <div className={styles.rewardImg} />
           <div className={styles.itemReturn}>
-            <a href="#">
+            <a href="#" className={styles.a}>
               Creators get rewarded - join the new adidas creators club
             </a>
           </div>
