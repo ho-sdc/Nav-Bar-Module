@@ -44,6 +44,7 @@ class Main extends React.Component {
       type: type || undefined
     });
   }
+
   handleGet(searchInput) {
     axios
       .get(`http://localhost:3001/search/${searchInput}`)

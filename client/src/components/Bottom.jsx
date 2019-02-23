@@ -16,7 +16,11 @@ class Bottom extends React.Component {
           <div className={styles.deliveryImg} />
           <div className={styles.itemReturn}>
             <Popup
-              trigger={<a href="#">Free Shipping and free returns</a>}
+              trigger={
+                <a href="#" className={styles.a}>
+                  Free Shipping and free returns
+                </a>
+              }
               modal
             >
               {close => <PopUpInfo close={close} />}
@@ -26,7 +30,7 @@ class Bottom extends React.Component {
         <div className={styles.headers}>
           <div className={styles.rewardImg} />
           <div className={styles.itemReturn}>
-            <a href="#">
+            <a href="#" className={styles.a}>
               Creators get rewarded - join the new adidas creators club
             </a>
           </div>

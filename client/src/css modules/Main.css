@@ -1,7 +1,16 @@
 .container {
   display: block;
+  position: sticky;
+  top: 0;
 }
 
 .DisplayPopUp {
   display: none;
+}
+
+.body {
+  font-family: "abibasdin-regular";
+  font-weight: 400;
+  font-style: normal;
+  margin: 0px;
 }
