@@ -19,7 +19,6 @@
   overflow: hidden;
   display: none;
   position: fixed;
-  background: transparent;
   left: 0;
   right: 0;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
@@ -32,6 +31,7 @@
   align-items: flex-start;
   margin-left: 110px;
   margin-top: 21px;
+  background-color: white;
 }
 
 .headline {
