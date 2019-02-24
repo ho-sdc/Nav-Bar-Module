@@ -26,6 +26,11 @@
   background-color: white;
 }
 
+.pictures {
+  height: 30px;
+  width: 30px;
+}
+
 .emailInputSection {
   padding-left: 20px;
   padding-right: 20px;
@@ -50,6 +55,7 @@
   text-transform: uppercase;
   pointer-events: none;
   z-index: 1;
+  font-family: "abibasdin-regular";
 }
 
 .formitem {
@@ -79,7 +85,7 @@
   border-image-outset: initial;
   border-image-repeat: initial;
   padding: 0 18px 0 18px;
-  width: 100%;
+  width: 200px;
   margin: 0;
 }
 
@@ -87,6 +93,7 @@
   display: inline-block;
   color: #e63f3f;
   margin-left: 3px;
+  font-family: "abibasdin-regular";
 }
 
 .formhint {
@@ -94,11 +101,11 @@
   font-size: 14px;
   line-height: 20px;
   padding-left: 21px;
+  font-family: "abibasdin-regular";
 }
 
 .aligncheckbox {
   padding-left: 20px;
-  padding-right: 20px;
   margin-top: 26px;
 }
 
@@ -126,6 +133,7 @@
   outline-color: initial;
   outline-style: none;
   outline-width: initial;
+  padding-right: 10px;
 }
 
 .inputcheckbox {
@@ -149,14 +157,15 @@
 
 .thirteen {
   display: inline-flex;
+  font-family: "abibasdin-regular";
   padding-left: 1px;
   padding-right: 1px;
 }
 .questionicon {
   height: 26px;
   position: relative;
-  margin-left: 10px;
   display: inline-block;
+  padding-right: 40px;
 }
 
 .button {
@@ -172,8 +181,7 @@
 }
 
 .gender {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 30px;
 }
 
 .genderword {
@@ -199,19 +207,14 @@
   cursor: pointer;
 }
 
-.inputmale {
-  position: absolute;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  padding: 0;
-}
-
 .gendername {
   height: 24px;
   display: inline-flex;
   line-height: 24px;
   font-family: "abibasdin-regular";
+}
+.separateMaleAndFemale {
+  width: 20px;
 }
 
 .container .signupbutton {
