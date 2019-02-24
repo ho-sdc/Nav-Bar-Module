@@ -40,13 +40,20 @@
   height: 100%;
 }
 
-.logo {
+.logofalse {
   width: 85px;
   top: -15px;
   position: relative;
   height: 60px;
   margin-right: 20px;
   transform-origin: 0 25px;
+}
+
+.logotrue {
+  composes: logofalse;
+  height: 43px;
+  width: 63px;
+  padding-top: 17px;
 }
 
 .labels {
