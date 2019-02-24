@@ -26,6 +26,11 @@
   background-color: white;
 }
 
+.pictures {
+  height: 30px;
+  width: 30px;
+}
+
 .emailInputSection {
   padding-left: 20px;
   padding-right: 20px;

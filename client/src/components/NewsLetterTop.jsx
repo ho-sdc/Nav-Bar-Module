@@ -11,7 +11,12 @@ const NewsLetterTop = () => (
         <div className={styles.calloutbar}>
           <div className={styles.calloutbarIn}>
             <div className={styles.emaillogo}>
-              <img src={emaillogo} width="88" height="98" />
+              <img
+                src={emaillogo}
+                width="88"
+                height="98"
+                className={styles.images}
+              />
             </div>
             <div className={styles.calloutbarCopy}>
               <div className={styles.learnmoreContainer}>
@@ -48,7 +53,12 @@ const NewsLetterTop = () => (
         <div className={styles.calloutbar}>
           <div className={styles.calloutbarIn}>
             <div className={styles.emaillogo}>
-              <img src={star} width="88" height="98" />
+              <img
+                src={star}
+                width="88"
+                height="98"
+                className={styles.images}
+              />
             </div>
             <div className={styles.calloutbarCopy}>
               <div className={styles.learnmoreContainer}>

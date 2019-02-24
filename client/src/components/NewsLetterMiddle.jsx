@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "../css modules/NewsLetterMiddle.css";
 import questionmark from "../assets/questionmark.png";
+import circle from "../assets/circle.png";
+import checkbox from "../assets/checkbox.png";
 
 class NewsLetterMiddle extends React.Component {
   constructor(props) {
@@ -29,8 +31,7 @@ class NewsLetterMiddle extends React.Component {
               <div className={styles.agecheck}>
                 <div>
                   <label className={styles.label}>
-                    <input type="checkbox" className={styles.inputcheckbox} />
-                    <div />
+                    <img src={checkbox} className={styles.pictures} />
                     <div className={styles.thirteen}>
                       Yes, I am over 13 years old{" "}
                       <div className={styles.formitemhint}>*</div>
@@ -51,22 +52,12 @@ class NewsLetterMiddle extends React.Component {
           <div className={[styles.agecheck, styles.gender]}>
             <div className={styles.genderword}>Gender</div>
             <div className={styles.malefemale}>
-              <label className={styles.options}>
-                <input
-                  type="radio"
-                  name="gendergroup"
-                  className={styles.inputmale}
-                />
-                <div className={styles.gendername}>Male</div>
-              </label>
-              <label className={styles.options}>
-                <input
-                  type="radio"
-                  name="gendergroup"
-                  className={styles.inputmale}
-                />
-                <div className={styles.gendername}>Female</div>
-              </label>
+              <img src={circle} className={styles.pictures} />
+
+              <div className={styles.gendername}>Male</div>
+              <img src={circle} className={styles.pictures} />
+
+              <div className={styles.gendername}>Female</div>
             </div>
           </div>
           <div>
