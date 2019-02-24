@@ -1,8 +1,6 @@
 import styles from "../css modules/Top.css";
 import React from "react";
 import loginMan from "../assets/login-man.png";
-import NewsLetter from "./NewsLetter.jsx";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 export default class Top extends React.Component {
   constructor(props) {
