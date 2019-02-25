@@ -6,7 +6,7 @@ const SportsTab = props => {
   let sportsItems = categories.sports.map((titles, index) => {
     for (var key in titles) {
       return (
-        <div key={index}>
+        <div key={index} className={styles.eachCol}>
           <div className={styles.headline}>{key}</div>
           <ul>
             {titles[key].map(items => {
