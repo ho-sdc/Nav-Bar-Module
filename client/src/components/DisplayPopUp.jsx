@@ -15,9 +15,7 @@ const lineStyle = {
 class DisplayPopUp extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      node: React.createRef()
-    };
+    this.state = {};
     this.handleSearchClicked = this.handleSearchClicked.bind(this);
   }
 

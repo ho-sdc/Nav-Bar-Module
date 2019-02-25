@@ -16,7 +16,7 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      clicked: false,
+      newsLetterClick: false,
       type: "",
       responseArr: undefined
     };
@@ -35,7 +35,7 @@ class Main extends React.Component {
   handleClick(e) {
     e.preventDefault();
     this.setState({
-      clicked: !this.state.clicked
+      newsLetterClick: !this.state.newsLetterClick
     });
   }
 
@@ -47,7 +47,7 @@ class Main extends React.Component {
 
   handleGet(searchInput) {
     axios
-      .get(`http://localhost:3001/search/${searchInput}`)
+      .get(`/search/${searchInput}`)
       .then(res => {
         if (res.data.length > 0) {
           console.log(res.data);
@@ -69,13 +69,12 @@ class Main extends React.Component {
         ref={node => (this.node = node)}
       >
         <div>
-          <Top clicked={this.handleClick} />
-          <div>{this.state.clicked ? <NewsLetter /> : null}</div>
+          <Top newsLetterClick={this.handleClick} />
+          <div>{this.state.newsLetterClick ? <NewsLetter /> : null}</div>
           <Middle
             toggleHover={this.toggleHover}
             handleGet={this.handleGet}
             responseArr={this.state.responseArr}
-            clicked={this.state.clicked}
             handleSearchClicked={this.handleSearchClicked}
           />
         </div>
