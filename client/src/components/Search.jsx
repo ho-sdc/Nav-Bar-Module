@@ -41,7 +41,7 @@ class Search extends React.Component {
     }
   }
 
-  handleOutsideClicked() {
+  handleOutsideClicked(e) {
     this.setState({
       clicked: false
     });
@@ -67,7 +67,7 @@ class Search extends React.Component {
             placeholder="search"
             className={styles.input}
             onChange={this.handleSearchInput.bind(this)}
-            onClick={this.handleClicked}
+            onClick={e => this.handleClicked(e)}
           />
         </div>
       </div>

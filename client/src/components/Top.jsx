@@ -5,9 +5,7 @@ import loginMan from "../assets/login-man.png";
 export default class Top extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      clicked: false
-    };
+    this.state = {};
   }
 
   render() {
