@@ -22,7 +22,7 @@ export default class Top extends React.Component {
         </div>
         <div className={styles.spacer} />
         <div className={styles.newsletter}>
-          <a href="#" onClick={this.props.clicked}>
+          <a href="#" onClick={this.props.newsLetterClick}>
             NEWSLETTER SIGNUP
           </a>
         </div>
