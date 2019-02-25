@@ -6,9 +6,13 @@ class Search extends React.Component {
     super(props);
     this.state = {
       type: "",
-      searchInput: undefined
+      searchInput: undefined,
+      clicked: false
     };
     this.handleSearchInput = this.handleSearchInput.bind(this);
+    this.handleClicked = this.handleClicked.bind(this);
+    this.handleOutsideClicked = this.handleOutsideClicked.bind(this);
+    this.handleSearchClicked = this.handleSearchClicked.bind(this);
   }
 
   handleSearchInput(e) {
@@ -24,18 +28,46 @@ class Search extends React.Component {
       }
     );
   }
+  componentDidMount() {
+    document.addEventListener("mousedown", this.handleSearchClicked);
+  }
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.handleSearchClicked);
+  }
+
+  handleSearchClicked(e) {
+    if (!document.getElementById("bar").contains(e.target)) {
+      this.handleOutsideClicked();
+    }
+  }
+
+  handleOutsideClicked() {
+    this.setState({
+      clicked: false
+    });
+  }
+
+  handleClicked() {
+    this.setState({
+      clicked: true
+    });
+  }
 
   render() {
     return (
       <div className={styles.search}>
-        <div className={styles.formOpen}>
+        <div
+          className={this.state.clicked ? styles.formOpen : styles.formClosed}
+        >
           <div className={styles.searchlogo} />
           <input
             type="text"
             name="q"
+            id="bar"
             placeholder="search"
             className={styles.input}
             onChange={this.handleSearchInput.bind(this)}
+            onClick={this.handleClicked}
           />
         </div>
       </div>

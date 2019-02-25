@@ -33,7 +33,7 @@ export default class Middle extends React.Component {
             <img
               src="https://s3-us-west-1.amazonaws.com/abibas-shoes/abibas.jpg"
               className={
-                this.props.clicked ? styles.logotrue : styles.logofalse
+                this.props.newsLetterClick ? styles.logotrue : styles.logofalse
               }
             />
           </div>
