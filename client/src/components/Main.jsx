@@ -75,6 +75,7 @@ class Main extends React.Component {
             toggleHover={this.toggleHover}
             handleGet={this.handleGet}
             responseArr={this.state.responseArr}
+            newsLetterClick={this.state.newsLetterClick}
             handleSearchClicked={this.handleSearchClicked}
           />
         </div>

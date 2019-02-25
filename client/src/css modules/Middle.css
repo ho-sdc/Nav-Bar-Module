@@ -41,10 +41,10 @@
 }
 
 .logofalse {
-  width: 85px;
-  top: -15px;
+  width: 100px;
+  top: -23px;
   position: relative;
-  height: 60px;
+  height: 69px;
   margin-right: 20px;
   transform-origin: 0 25px;
 }
@@ -53,7 +53,7 @@
   composes: logofalse;
   height: 43px;
   width: 63px;
-  padding-top: 17px;
+  padding-top: 24px;
 }
 
 .labels {
@@ -149,6 +149,6 @@
 }
 
 .shoppingbag {
-  height: 46px;
-  width: 31px;
+  height: 39px;
+  width: 28px;
 }
