@@ -16,7 +16,7 @@ const GetFeatured = props => {
   var firstThree = featuredCat.featured.slice(0, 3);
   var lastThree = featuredCat.featured.slice(3);
   return (
-    <div>
+    <div className={styles.eachCol}>
       <div className={styles.headline}>Featured</div>
       <ul>
         <SetItems arr={firstThree} />
@@ -36,7 +36,7 @@ const GetMen = props => {
   return noFeatured.map((titles, index) => {
     for (var key in titles) {
       return (
-        <div key={index}>
+        <div key={index} className={styles.eachCol}>
           <div className={styles.headline}>{key}</div>
           <ul>
             <SetItems arr={titles[key]} />
@@ -61,7 +61,7 @@ class MenTab extends React.Component {
         className={styles.mainLine}
         onMouseLeave={() => this.props.toggleHover()}
       >
-        <div className={styles.mainLine}>
+        <div className={styles.nextLine}>
           <GetFeatured />
           <GetMen />
         </div>

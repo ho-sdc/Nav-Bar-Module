@@ -51,9 +51,9 @@
 
 .logotrue {
   composes: logofalse;
-  height: 43px;
-  width: 63px;
-  padding-top: 24px;
+  height: 46px;
+  width: 69px;
+  padding-top: 23px;
 }
 
 .labels {
