@@ -2,11 +2,14 @@ const express = require("express");
 const parser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
+const morgan = require('morgan');
 const port = 3001;
 const { Products, regex } = require("../database/index.js");
+// const postgresDB = require('../postgres/index.js');
 
 const app = express();
 
+app.use(morgan('dev'));
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
 app.use(cors());

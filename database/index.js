@@ -16,7 +16,7 @@ const productsSchema = new mongoose.Schema({
 });
 
 const regex = keyword => {
-  return new RegExp(`^[${keyword}]\w*`, "g");
+  return new RegExp(keyword, "gi");
 };
 
 const Products = mongoose.model("products", productsSchema);
