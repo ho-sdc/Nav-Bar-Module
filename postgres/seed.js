@@ -6,7 +6,7 @@ const generateCSV = () => {
 	return str;
 }
 
-const wStream = fs.createWriteStream('postgres2.csv');
+const wStream = fs.createWriteStream('output.csv');
 (() => {
   let i = 1e7;
   write();

@@ -1,19 +1,21 @@
-// const Sequelize = require('sequelize');
-// const connection = require('./index.js');
+const Sequelize = require('sequelize');
+const connection = require('./index.js');
 
-// const Products = connection.define(
-// 	'products',
-// 	{
-// 		id: {
-// 			type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true
-// 		},
-// 		keyword: Sequelize.STRING,
-// 		item_name: Sequelize.STRING,
-// 		category: Sequelize.STRING,
-// 		stars: Sequelize.INTEGER,
-// 		pictures: Sequelize.STRING
-// 	},
-// 	{ timestamps: false }
-// );
+const Products = connection.define(
+	'products',
+	{
+		id: {
+			type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true
+		},
+		keyword: Sequelize.STRING,
+		item_name: Sequelize.STRING,
+		category: Sequelize.STRING,
+		stars: Sequelize.INTEGER,
+		pictures: Sequelize.STRING
+	},
+	{ timestamps: false }
+);
 
-// sequelize.sync();
+connection.sync();
+
+module.exports = Products;

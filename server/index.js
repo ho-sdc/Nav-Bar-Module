@@ -4,8 +4,10 @@ const cors = require("cors");
 const path = require("path");
 const morgan = require('morgan');
 const port = 3001;
-const { Products, regex } = require("../database/index.js");
-// const postgresDB = require('../postgres/index.js');
+// const mongoDB = require('../mongo/index.js');
+// const mongoCont = require("../mongo/controller.js");
+const postgresDB = require('../postgres/index.js');
+const pgCont = require('../postgres/controller.js');
 
 const app = express();
 
@@ -15,13 +17,8 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.static(path.resolve(__dirname, "../client/dist")));
 
-app.get("/search/:keyword", (req, res) => {
-  let { keyword } = req.params;
-  const actualRegex = regex(keyword);
-  Products.find({ keyword: actualRegex })
-    .limit(4)
-    .then(data => res.send(data))
-    .catch(err => console.log(err));
-});
+app.get('/search/:keyword', pgCont.get);
+
+// app.get("/search/:keyword", mongoCont.get);
 
 app.listen(port, () => console.log("App is listening on port: ", port));
