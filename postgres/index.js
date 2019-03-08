@@ -1,3 +1,4 @@
+const path = require('path');
 const { Pool } = require('pg');
 const pool = new Pool({
   user: 'postgres',
@@ -20,17 +21,26 @@ pool
   .connect()
   .then(() => {
     console.log('Connected to PostgreSQL');
-    pool.query(psqlSchema);
-  })
-  .then(() => {
-    pool.query('CREATE INDEX IF NOT EXISTS keyword_b_idx ON products(keyword text_pattern_ops)')
-    .then(() => {
-      pool.query('CREATE EXTENSION IF NOT EXISTS pg_trgm')
+    pool.query(psqlSchema)
       .then(() => {
-        pool.query('CREATE INDEX IF NOT EXISTS trgm_idx ON products USING GIN (keyword gin_trgm_ops)')
-      })
-    })
-  })
-  .catch(err => console.error(err));
+        pool.query('SELECT * FROM products LIMIT 5')
+        .then(data => {
+          if (data.rows.length === 0) {
+            return pool.query(`\copy products("keyword","item_name","category","stars","pictures") FROM '${path.resolve( __dirname, '../../postgres2.csv' )}' DELIMITER '|' CSV;`)
+            .then(() => {
+              pool.query('CREATE INDEX IF NOT EXISTS keyword_b_idx ON products(keyword text_pattern_ops)')
+                .then(() => {
+                  pool.query('CREATE EXTENSION IF NOT EXISTS pg_trgm')
+                    .then (() => {
+                      pool.query('CREATE INDEX IF NOT EXISTS trgm_idx ON products USING GIN (keyword gin_trgm_ops)')
+                        .then(() => console.log('Indexed'))
+                      })
+                    })
+                  })
+                }
+              })
+            })
+          })
+          .catch(err => console.log(err))
 
 module.exports = pool;
