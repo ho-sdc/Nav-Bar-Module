@@ -5,7 +5,6 @@ const path = require("path");
 const morgan = require('morgan');
 const port = 3001;
 const routes = require('./routes.js');
-const controller = require('./controller.js');
 
 const pool = require('../postgres/index.js');
 
