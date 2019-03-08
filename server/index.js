@@ -4,6 +4,7 @@ const cors = require("cors");
 const path = require("path");
 const morgan = require('morgan');
 const port = 3001;
+const routes = require('./routes.js');
 const controller = require('./controller.js');
 
 const app = express();
@@ -14,6 +15,6 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.static(path.resolve(__dirname, "../client/dist")));
 
-app.get('/search/:keyword', controller.get);
+app.use('/', routes);
 
 app.listen(port, () => console.log("App is listening on port: ", port));
