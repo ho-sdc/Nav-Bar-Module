@@ -7,6 +7,8 @@ const port = 3001;
 const routes = require('./routes.js');
 const controller = require('./controller.js');
 
+const pool = require('../postgres/index.js');
+
 const app = express();
 
 app.use(morgan('dev'));

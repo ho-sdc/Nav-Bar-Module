@@ -6,7 +6,7 @@ module.exports = {
     console.log(keyword);
     if (keyword.length > 3) {
       pool.query('SELECT * FROM products WHERE keyword ILIKE \'%' + keyword + '%\' LIMIT 4')
-        .then(data => res.status(200).send(data.rows))
+        .then(data => res.status(200).json(data.rows))
         .catch(err => res.status(404).send(err))
     }
   }
