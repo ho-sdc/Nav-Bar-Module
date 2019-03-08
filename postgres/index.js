@@ -1,12 +1,13 @@
-const Sequelize = require('sequelize');
-
-const connection = new Sequelize('abibas_search', 'postgres', 'root', {
-	dialect: 'postgres'
+const { Pool } = require('pg');
+const pool = new Pool({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'abibas_search',
+  password: 'root'
 });
 
-connection
-	.authenticate()
-	.then(() => console.log('Connected to PostgreSQL'))
-	.catch(() => console.log('Error connecting to the database'))
+pool.on('error', (err, client) => {
+  console.error('idle client error', err.message, err.stack);
+});
 
-module.exports = connection;
+module.exports = pool;
