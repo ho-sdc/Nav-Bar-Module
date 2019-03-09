@@ -1,0 +1,12 @@
+config:
+  target: 'http://localhost:3001'
+  phases:
+    - duration: 5
+      arrivalRate: 100
+  processor: "./generate.js"
+scenarios:
+  - flow:
+    - function: "generateWord"
+    - get:
+        url: '/search/{{ word }}'
+    - log: 'Sent a request to /search with {{ word }}'
