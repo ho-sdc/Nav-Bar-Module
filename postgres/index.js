@@ -2,7 +2,7 @@ const path = require('path');
 const { Pool } = require('pg');
 const pool = new Pool({
   user: 'postgres',
-  host: 'localhost',
+  host: '13.57.203.2',
   database: 'abibas_search',
   password: 'root'
 });
@@ -15,7 +15,7 @@ const psqlSchema =
   category VARCHAR, 
   stars INTEGER, 
   pictures VARCHAR
-  )`;
+  )`; 
 
 pool
   .connect()

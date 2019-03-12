@@ -58,7 +58,7 @@ class DisplayPopUp extends React.Component {
                 return (
                   <li className={styles.eachList}>
                     <a className={styles.parentProducts}>
-                      <img src={dataObj.picture} className={styles.images} />
+                      <img src={dataObj.pictures} className={styles.images} />
                       <div className={styles.productInfo}>
                         <div style={headerStyle}>{dataObj.item_name}</div>
                         <div style={lineStyle}>{dataObj.cuteness_level}</div>

@@ -1,3 +1,6 @@
 node_modules
 postgres.csv
 postgres2.csv
+Dockerfile
+.dockerignore
+loaderio-69bebea9d65d4b51d5b2167c2a11b200.txt
