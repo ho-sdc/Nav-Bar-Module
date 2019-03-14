@@ -11,9 +11,15 @@ let variable = {
   }]
 }
 
-arr.forEach(word => variable.variables[0].values.push([word]));
+arr.forEach(word => {
+  if (!word.includes("'")) {
+    variable.variables[0].values.push([word])
+  } else {
+    console.log(word);
+  }
+  });
 
-fs.writeFile('output.json', JSON.stringify(variable), 'UTF-8', err => {
+fs.writeFile('output2.json', JSON.stringify(variable), 'UTF-8', err => {
   if (err) {
     console.log(err);
   }
